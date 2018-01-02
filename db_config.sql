@@ -43,7 +43,7 @@ CREATE TABLE "config" (
 -- ----------------------------
 -- Records of config
 -- ----------------------------
-INSERT INTO "config" VALUES (5, 15, 2, 4);
+INSERT INTO "config" VALUES (5, 15, 2, 4, 0);
 
 -- ----------------------------
 -- Table structure for "main"."dataPoint"
@@ -66,10 +66,10 @@ PRIMARY KEY ("id" ASC)
 -- ----------------------------
 -- Records of dataPoint
 -- ----------------------------
-INSERT INTO ""."dataPoint" VALUES (1, 1, 'Freq', 2, 2, 4, null, 0, 1.0, 17.0);
+INSERT INTO ""."dataPoint" VALUES (1, 1, 'Freq', 2, 2, 4, 0, 0, 1.0, 17.0);
 INSERT INTO ""."dataPoint" VALUES (2, 2, 'Write', 9, 1, 6, 991, 0, 0.0, 0.0);
-INSERT INTO ""."dataPoint" VALUES (3, 2, 'L2-N', 4, 8, 4, null, 0, 10.0, 0.0);
-INSERT INTO ""."dataPoint" VALUES (4, 2, 'L1-N', 6, 5, 4, null, 0, 1.0, 0.0);
+INSERT INTO ""."dataPoint" VALUES (3, 2, 'L2-N', 4, 8, 4, 0, 0, 10.0, 0.0);
+INSERT INTO ""."dataPoint" VALUES (4, 2, 'L1-N', 6, 5, 4, 0, 0, 1.0, 0.0);
 
 -- ----------------------------
 -- Table structure for "main"."dataSource"
