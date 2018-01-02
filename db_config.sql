@@ -66,10 +66,10 @@ PRIMARY KEY ("id" ASC)
 -- ----------------------------
 -- Records of dataPoint
 -- ----------------------------
-INSERT INTO ""."dataPoint" VALUES (1, 1, 'Freq', 2, 2, 4, 0, 0, 1.0, 17.0);
-INSERT INTO ""."dataPoint" VALUES (2, 2, 'Write', 9, 1, 6, 991, 0, 0.0, 0.0);
-INSERT INTO ""."dataPoint" VALUES (3, 2, 'L2-N', 4, 8, 4, 0, 0, 10.0, 0.0);
-INSERT INTO ""."dataPoint" VALUES (4, 2, 'L1-N', 6, 5, 4, 0, 0, 1.0, 0.0);
+INSERT INTO "dataPoint" VALUES (1, 1, 'Freq', 2, 2, 4, 0, 0, 1.0, 17.0);
+INSERT INTO "dataPoint" VALUES (2, 2, 'Write', 9, 1, 6, 991, 0, 0.0, 0.0);
+INSERT INTO "dataPoint" VALUES (3, 2, 'L2-N', 4, 8, 4, 0, 0, 10.0, 0.0);
+INSERT INTO "dataPoint" VALUES (4, 2, 'L1-N', 6, 5, 4, 0, 0, 1.0, 0.0);
 
 -- ----------------------------
 -- Table structure for "main"."dataSource"
@@ -92,8 +92,8 @@ PRIMARY KEY ("deviceId" ASC)
 -- ----------------------------
 -- Records of dataSource
 -- ----------------------------
-INSERT INTO ""."dataSource" VALUES (1, 'DINTEGRA1', 1, '/dev/ttyS1', 9600, 'N', 8, 1, 1, 7);
-INSERT INTO ""."dataSource" VALUES (2, 'ModbusTCP', 1, '192.168.1.30', 0, 0, 0, 0, 2, 7);
+INSERT INTO "dataSource" VALUES (1, 'DINTEGRA1', 1, '/dev/ttyS1', 9600, 'N', 8, 1, 1, 7);
+INSERT INTO "dataSource" VALUES (2, 'ModbusTCP', 1, '192.168.1.30', 0, 0, 0, 0, 2, 7);
 
 -- ----------------------------
 -- Table structure for "main"."server"
@@ -109,4 +109,4 @@ CREATE TABLE "server" (
 -- ----------------------------
 -- Records of server
 -- ----------------------------
-INSERT INTO ""."server" VALUES ('192.168.1.16', '/data', '/error', '/updates');
+INSERT INTO "server" VALUES ('192.168.1.16', '/data', '/error', '/updates');
