@@ -81,6 +81,7 @@ INSERT INTO "eventlog" VALUES(2,2,'2014-04-26 15:10','Error reading DataSource')
 INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
 INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
 INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
+DROP TABLE "deviceStatus";
 CREATE TABLE "deviceStatus" (
 "deviceId"  INTEGER NOT NULL,
 "status"  INTEGER NOT NULL,
