@@ -4,15 +4,15 @@ Demo Program to log data from a Modbus TCP/RTU device to a SQL lite database
 
 Install dependances first
 
-# apt-get install sqlite3 libsqlite3-dev libmodbus5 libmodbus-dev
+apt-get install sqlite3 libsqlite3-dev libmodbus5 libmodbus-dev
 
-Compile using 
+Compile using :
 
-# make
+make
 
 Regenerate demo config 
 
-# ./createdbs
+./createdbs
 
 Use Modbus TCP Slave simulator :
 
