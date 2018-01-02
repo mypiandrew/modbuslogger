@@ -23,15 +23,11 @@
 
 	Pre-requisits :
 
-	Modbus :
-	https://github.com/stephane/libmodbus/wiki/Libmodbus-on-Raspberry-pi
-	
-	SQLite :
-	
-	apt-get install sqlite3 libsqlite3-dev
+	apt-get install sqlite3 libsqlite3-dev libmodbus5 libmodbus-dev
 
-	Compile as below to allow program to use external system (.so) libraries 
+	Compile as below or use 'make all' to allow program to use external system (.so) libraries 
 	gcc log.c -o log -lsqlite3 -lmodbus
+	
 
 */
 
