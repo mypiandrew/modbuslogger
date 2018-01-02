@@ -49,7 +49,7 @@ CREATE TABLE "dataSource" (
 "deviceTimeout"  INTEGER NOT NULL DEFAULT 5,
 PRIMARY KEY ("deviceId" ASC)
 );
-INSERT INTO "dataSource" VALUES(1,'DINTEGRA1',1,'/dev/ttyS0',9600,'N',8,1,1,7);
+INSERT INTO "dataSource" VALUES(1,'DINTEGRA1',1,'/dev/ttyAMA0',9600,'N',8,1,1,7);
 INSERT INTO "dataSource" VALUES(2,'ModbusTCP',1,'192.168.1.30',0,'0',0,0,2,7);
 DROP TABLE IF EXISTS "dataPoint";
 CREATE TABLE "dataPoint" (
