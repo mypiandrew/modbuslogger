@@ -25,10 +25,9 @@
 
 
 */
-
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-DROP TABLE "server";
+DROP TABLE IF EXISTS "server";
 CREATE TABLE "server" (
 "server"  TEXT(255) NOT NULL,
 "data"  TEXT(255) NOT NULL,
@@ -36,7 +35,7 @@ CREATE TABLE "server" (
 "updates"  TEXT(255) NOT NULL
 );
 INSERT INTO "server" VALUES('192.168.1.16','/data','/error','/updates');
-DROP TABLE "dataSource";
+DROP TABLE IF EXISTS "dataSource";
 CREATE TABLE "dataSource" (
 "deviceId"  INTEGER NOT NULL,
 "deviceName"  TEXT NOT NULL,
@@ -52,7 +51,7 @@ PRIMARY KEY ("deviceId" ASC)
 );
 INSERT INTO "dataSource" VALUES(1,'DINTEGRA1',1,'/dev/ttyS0',9600,'N',8,1,1,7);
 INSERT INTO "dataSource" VALUES(2,'ModbusTCP',1,'192.168.1.30',0,'0',0,0,2,7);
-DROP TABLE "dataPoint";
+DROP TABLE IF EXISTS "dataPoint";
 CREATE TABLE "dataPoint" (
 "id"  INTEGER NOT NULL,
 "deviceId"  INTEGER NOT NULL,
@@ -66,11 +65,11 @@ CREATE TABLE "dataPoint" (
 "offset"  REAL NOT NULL DEFAULT 0,
 PRIMARY KEY ("id" ASC)
 );
-INSERT INTO "dataPoint" VALUES(1,2,'Freq',2,2,4,NULL,0,1.0,0.0);
+INSERT INTO "dataPoint" VALUES(1,2,'Freq',2,1,4,NULL,0,1.0,0.0);
 INSERT INTO "dataPoint" VALUES(2,2,'Write',9,1,6,991,0,0.0,0.0);
-INSERT INTO "dataPoint" VALUES(3,2,'L2-N',4,8,4,NULL,0,1.0,0.0);
-INSERT INTO "dataPoint" VALUES(4,2,'L1-N',6,5,4,NULL,0,1.0,0.0);
-DROP TABLE "config";
+INSERT INTO "dataPoint" VALUES(3,2,'L2-N',4,2,4,NULL,0,1.0,0.0);
+INSERT INTO "dataPoint" VALUES(4,2,'L1-N',6,2,4,NULL,0,1.0,0.0);
+DROP TABLE IF EXISTS "config";
 CREATE TABLE "config" (
 "logInterval"  INTEGER NOT NULL DEFAULT 5,
 "transferInterval"  INTEGER NOT NULL DEFAULT 30,
