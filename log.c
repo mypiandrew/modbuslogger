@@ -21,7 +21,7 @@
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
 
-	Pre-requisits :
+	Dependancies :
 
 	apt-get install sqlite3 libsqlite3-dev libmodbus5 libmodbus-dev
 
