@@ -28,7 +28,7 @@
 
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-DROP TABLE "dataLog";
+DROP TABLE IF EXISTS "dataLog";
 CREATE TABLE "dataLog" (
 "deviceId"  INTEGER,
 "id"  INTEGER,
@@ -47,7 +47,7 @@ INSERT INTO "dataLog" VALUES(2,4,'2014-04-26 15:10',0.0);
 INSERT INTO "dataLog" VALUES(1,1,'2014-04-26 15:17',0.0);
 INSERT INTO "dataLog" VALUES(2,3,'2014-04-26 15:17',9.16540649414062436051e+02);
 INSERT INTO "dataLog" VALUES(2,4,'2014-04-26 15:17',268304384.0);
-DROP TABLE "eventLog";
+DROP TABLE IF EXISTS "eventLog";
 CREATE TABLE "eventlog" (
 "datapointId"  INTEGER,
 "deviceid"  INTEGER NOT NULL,
@@ -81,7 +81,7 @@ INSERT INTO "eventlog" VALUES(2,2,'2014-04-26 15:10','Error reading DataSource')
 INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
 INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
 INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
-DROP TABLE "deviceStatus";
+DROP TABLE IF EXISTS "deviceStatus";
 CREATE TABLE "deviceStatus" (
 "deviceId"  INTEGER NOT NULL,
 "status"  INTEGER NOT NULL,
@@ -91,5 +91,4 @@ PRIMARY KEY ("deviceId")
 INSERT INTO "deviceStatus" VALUES(1,10,'2014-04-26 15:17');
 INSERT INTO "deviceStatus" VALUES(2,0,'2014-04-26 15:17');
 COMMIT;
-
 
