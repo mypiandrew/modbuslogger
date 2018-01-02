@@ -26,38 +26,69 @@
 
 */
 
-PRAGMA foreign_keys = OFF;
-
--- ----------------------------
--- Table structure for "main"."dataLog"
--- ----------------------------
-DROP TABLE IF EXISTS  "dataLog";
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+DROP TABLE "dataLog";
 CREATE TABLE "dataLog" (
 "deviceId"  INTEGER,
 "id"  INTEGER,
 "timeStamp"  TEXT,
 "value"  REAL
 );
-
--- ----------------------------
--- Table structure for "main"."deviceStatus"
--- ----------------------------
-DROP TABLE IF EXISTS  "deviceStatus";
-CREATE TABLE "deviceStatus" (
-"deviceId"  INTEGER NOT NULL,
-"status"  INTEGER NOT NULL,
-"timeStamp"  TEXT NOT NULL
-PRIMARY KEY ("deviceId" ASC)
-);
-
--- ----------------------------
--- Table structure for "eventlog"
--- ----------------------------
-DROP TABLE IF EXISTS  "eventlog";
+INSERT INTO "dataLog" VALUES(1,1,'2014-04-26 14:05',0.0);
+INSERT INTO "dataLog" VALUES(2,3,'2014-04-26 14:05',9.16540649414062436051e+02);
+INSERT INTO "dataLog" VALUES(2,4,'2014-04-26 14:05',268304384.0);
+INSERT INTO "dataLog" VALUES(1,1,'2014-04-26 14:10',0.0);
+INSERT INTO "dataLog" VALUES(2,3,'2014-04-26 14:10',9.16540649414062436051e+02);
+INSERT INTO "dataLog" VALUES(2,4,'2014-04-26 14:10',268304384.0);
+INSERT INTO "dataLog" VALUES(1,1,'2014-04-26 15:10',0.0);
+INSERT INTO "dataLog" VALUES(2,3,'2014-04-26 15:10',0.0);
+INSERT INTO "dataLog" VALUES(2,4,'2014-04-26 15:10',0.0);
+INSERT INTO "dataLog" VALUES(1,1,'2014-04-26 15:17',0.0);
+INSERT INTO "dataLog" VALUES(2,3,'2014-04-26 15:17',9.16540649414062436051e+02);
+INSERT INTO "dataLog" VALUES(2,4,'2014-04-26 15:17',268304384.0);
+DROP TABLE "eventLog";
 CREATE TABLE "eventlog" (
-"datapointId"  INTEGER, 
+"datapointId"  INTEGER,
 "deviceid"  INTEGER NOT NULL,
 "timestamp"  TEXT NOT NULL,
 "event"  TEXT NOT NULL
 );
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:05','Modbus Read failed');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:05','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:05','Modbus Read failed');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:05','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:05','Modbus Read failed');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:05','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:10','Modbus Read failed');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:10','Modbus Read failed');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:10','Modbus Read failed');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 14:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(3,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(3,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(3,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(4,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(4,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(4,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(2,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(2,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(2,2,'2014-04-26 15:10','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
+INSERT INTO "eventlog" VALUES(1,1,'2014-04-26 15:17','Error reading DataSource');
+CREATE TABLE "deviceStatus" (
+"deviceId"  INTEGER NOT NULL,
+"status"  INTEGER NOT NULL,
+"timeStamp"  TEXT NOT NULL,
+PRIMARY KEY ("deviceId")
+);
+INSERT INTO "deviceStatus" VALUES(1,10,'2014-04-26 15:17');
+INSERT INTO "deviceStatus" VALUES(2,0,'2014-04-26 15:17');
+COMMIT;
+
 
